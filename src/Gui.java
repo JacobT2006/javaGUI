@@ -12,9 +12,12 @@ public class Gui extends JFrame {
         this.setSize(new Dimension(x, y));
 
         JPanel panel = new JPanel();
+
         panel.add(createButtons());
 
+
         this.add(panel);
+
 
         this.setVisible(true);
     }
@@ -36,3 +39,6 @@ public class Gui extends JFrame {
 
 
 }
+
+
+// use numericformat exception for calculations

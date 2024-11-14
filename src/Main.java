@@ -6,5 +6,4 @@ public class Main {
         SwingUtilities.invokeLater(Gui::new);
 
     }
-
 }
