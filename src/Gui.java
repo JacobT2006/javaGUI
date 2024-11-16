@@ -3,6 +3,8 @@ import java.awt.*;
 
 public class Gui extends JFrame {
 
+    private JTextField display;
+
     final int x = 750;
     final int y = 1000;
     public Gui(){
@@ -12,7 +14,6 @@ public class Gui extends JFrame {
         this.setSize(new Dimension(x, y));
 
         JPanel panel = new JPanel();
-
         panel.add(createButtons());
 
 
@@ -25,9 +26,15 @@ public class Gui extends JFrame {
     // Create buttons
     public Component createButtons(){
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(4, 3));
+        buttonPanel.setLayout(new GridLayout(4, 4));
 
-        String[] buttonLabels = {"7", "8", "9", "4", "5", "6", "1", "2", "3", "0", ".", "="};
+        String[] buttonLabels = {
+                "7", "8", "9", "/",
+                "4", "5", "6", "x",
+                "1", "2", "3", "-",
+                "0", ".", "=", "+"
+        };
+
         for(String labels : buttonLabels){
             JButton btn = new JButton(labels);
             btn.setPreferredSize(new Dimension(120, 80));
